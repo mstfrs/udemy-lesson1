@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AraKatman from './AraKatman'
+import React, { Component } from 'react'
+
+ class App extends Component {
+  render() {
+    const dizim=[{
+      id:1,
+      ad:"Mustafa",
+      soyad:"ÖRS"
+    },
+    {
+      id:2,
+      ad:"Murat",
+      soyad:"Öz"
+    },{
+      id:3,
+      ad:"Mehmet",
+      soyad:"BOZ"
+    }
+  ]
+    return (
+      <div>
+        <AraKatman dizim={dizim}/>
+        {/* <AraKatman isim={this.props.ad} soyisim={this.props.soyad}/> */}
+      </div>
+    )
+  }
 }
-
-export default App;
+export default App
